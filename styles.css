@@ -1,7 +1,11 @@
 body {
-    background-color: rgb(43, 42, 42);
-    margin: 0;
-    padding: 0;
+  background-color: rgb(43, 42, 42);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -9,166 +13,134 @@ body::-webkit-scrollbar {
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url("./fonts/Inter-VariableFont_opsz\,wght.ttf");
+  font-family: "Inter";
+  src: url("./fonts/Inter-VariableFont_opsz\,wght.ttf");
 }
 
 @font-face {
-    font-family: "Space Grotesk";
-    src: url(./fonts/SpaceGrotesk-VariableFont_wght.ttf);
+  font-family: "Space Grotesk";
+  src: url(./fonts/SpaceGrotesk-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: "Roboto Condensed";
-    src: url("./fonts/RobotoCondensed-VariableFont_wght.ttf");
+  font-family: "Roboto Condensed";
+  src: url("./fonts/RobotoCondensed-VariableFont_wght.ttf");
 }
 
 p {
-    color: white;
-    font-family: "Inter";
+  color: white;
+  font-family: "Inter";
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: hsl(0, 100%, 100%);
-    /* font-weight: bolder; */
-    letter-spacing: -1px;
-    font-family: 'Roboto Condensed';
-    width: fit-content;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: hsl(0, 50%, 100%);
+  /* font-weight: bolder; */
+  letter-spacing: -1px;
+  font-family: "Roboto Condensed";
+  width: fit-content;
 }
 
 h2 {
-    font-size: 40px ;
-    font-weight: 500;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 h3 {
-    font-size: 20px;
-    font-weight: 400;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 #hero {
-    margin: 10px 20px 20px 20px;
-    display: inline-block;
-    width: 50%;
+  margin: 10px 20px 20px 20px;
+  display: inline-block;
+  width: 50%;
 }
 
 #introduction {
-    font-family: "Space Grotesk";
-    /* background-position: top; */
+  margin-left: 30px;
 }
 
 #roles {
-    /* font-size: norma; */
-    display: inline-block;
-    width: auto;
-    height: 30;
-    padding: 4px 20px 4px 20px;
-    background-color: rgba(16, 12, 12, 0.50);
-    /* margin-left: 1px; */
-    margin-top: 2px;
-    margin-left: 50px;
+  /* font-size: norma; */
+  display: inline-block;
+  width: auto;
+  height: 30;
+  padding: 4px 20px 4px 20px;
+  background-color: rgba(16, 12, 12, 0.5);
+  /* margin-left: 1px; */
+  margin-top: 2px;
+  /* margin-left: 50px; */
 }
 
-
 .role {
-    display: inline-block;
-    font-size: 15px;
-    margin: 0;
-    font-family: "Space Grotesk";
+  display: inline-block;
+  font-size: 15px;
+  margin: 0;
+  font-family: "Space Grotesk";
 }
 
 #about {
-    height: 100%;
-    max-width: 60ch;
-    margin: 50px 0px 100px 70px;
+  height: 100%;
+  max-width: 60ch;
+  margin: 50px 0px 100px 70px;
 }
 
 #about p {
-    /* font-size: 25px; */
-    font-weight: 300;
-    color: rgb(233, 233, 233);
-    /* font-family: ; */
+  /* font-size: 25px; */
+  font-weight: 300;
+  color: rgb(233, 233, 233);
+  /* font-family: ; */
 }
 
-
 ul {
-    /* line-height: 20px; */
+  /* line-height: 20px; */
 }
 
 li {
-    font-family: "Inter";
-    color: white;
-    list-style: none;
-    width: 40%;
-    /* background-color: rgba(16, 12, 12, 0.50); */
+  font-family: "Inter";
+  color: white;
+  list-style: none;
+  width: 40%;
+  /* background-color: rgba(16, 12, 12, 0.50); */
 }
 
 .goal {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 /* TODO: Figure out how to make the width equal to the widest list item */
 .highlight {
-    background-color:rgba(16, 12, 12, 0.50);
-    padding: 5px;
-    margin-bottom: 5px;
+  background-color: rgba(16, 12, 12, 0.5);
+  padding: 5px;
+  margin-bottom: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section {
-    /* align-items: ; */
-    padding: 60px;
-    /* text-align: center; */
+  /* align-items: ; */
+  padding: 60px;
+  /* text-align: center; */
 }
-
-
-
-
-
-
-
-
-
-
 
 #nickname {
-    font-size:70px;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 0;
-    /* font-weight: bolder; */
-    font-family: "Roboto Condensed";
-    font-weight: 700;
+  font-size: 70px;
+  margin-top: 50px;
+  /* margin-left: 50px; */
+  margin-bottom: 0;
+  /* font-weight: bolder; */
+  font-family: "Roboto Condensed";
+  font-weight: 700;
 }
-
-
-
-
-
 
 .hr-line {
-    width: 100%;
-    height: 2px;
-    background-color: #555555;
-    border: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #555555;
+  border: 0;
 }
-
-#main {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
