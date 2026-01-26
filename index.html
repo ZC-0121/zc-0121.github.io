@@ -1,23 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Portfolio</title>
-</head>
-<body>
-    <header class="header">
-      <h1>Lane</h1>
-      <div id="filler"></div>
-      <nav>
-        <ul class="social-buttons">
-          <!-- <li><a><img src="./resources/x-logo.svg"></a></li>
-          <li><a><img src="./resources/youtube-logo.svg"></a></li>
-          <li><a><img src="./resources/insta-logo.svg"></a></li> -->
-        </ul>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="banner">
+      <canvas id="gridCanvas"></canvas>
+      
+      <div id="banner-content">
+       <a href="https://www.youtube.com/watch?v=KrhjX_Vf_Rc" target="_blank"> <h1>ZC</h1> </a>
+      </div>
     </header>
-    <main class="maincontent"></main>
-</body>
+
+    <hr class="section-separator" />
+
+    <main class="maincontent">
+      <section id="section-projects">
+        <header>
+          <h2>Projects 🛠</h2>
+          <p>
+            Currently empty
+          </p>
+        </header>
+      </section>
+
+      <hr class="section-separator">
+
+      <section id="section-web-log">
+        <header>
+          <h2>Web Log</h2>
+          <p>Just thoughts and ideas.</p>
+        </header>
+        <section id="web-log-recommendations">
+          <h3>Recommendations</h3>
+          <section id="recommendations-videos">
+            <head>
+              <h4>Videos</h4>
+            </head>
+            <article class="recommendations-article">
+            <div class="card">
+              <header>
+              <h5>The Driving Emotions of Societies</h5>
+            </header>
+            <div class="card-content">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ul2iW3mWl90?si=F7EWOTbn-xnkNe6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Gen Z is considered to be the most secular generation today. And I think this video brings an important detail to why this is. And I'm one of these people.
+              I think this video brings an important point across, fear is not a viable emotion to use anymore. It worked back in pastoral times and is one of the reasons why
+              the old testament contained so much violence, it was to use fear to make society cohesive, but as said in the video, this emotion is no longer viable, practically no 
+              society in the modern world uses this form, even North Korea is not this devoted to using fear as they know this would lead to a revolution.
+
+              <br>
+
+              So when a person says to fear God, gen Z will likely not understand it since it's anachronistic. I think the better way to go forward if religious institutions wish to win over
+              gen Z back is to utilize emotions that are other than fear. Using futuristic.
+            </p>
+            </div>
+            </div>
+          </article>
+          <article class="recommendations-article">
+            <div class="card">
+              <header>
+              <h5>The Greatest Lie Ever Told</h5>
+            </header>
+            <div class="card-content">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/RzkO6gl1LgE?si=Sbt4C3WNiwMTtm4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            </div>
+          </article>
+          </section>
+          <section id="recommendations-books">
+            <head>
+              <h4>Books</h4>
+            </head>
+            <article class="recommendations-books-article">
+              <header>
+                <h5>The Sovereign Individual</h5>
+                <p class="author">James Dale Davidson and William Rees-Mogg</p>
+              </header>
+            </article>
+            <article class="recommendations-books-article">
+              <header>
+                <h5>Atlas Shrugged</h5>
+                <p class="author">Ayn Rand</p>
+              </header>
+            </article>
+            <article class="recommendations-books-article">
+              <header>
+                <h5>Zero To One</h5>
+                <p class="author">Peter Thiel</p>
+                <p>One of the most influential books in my life</p>
+              </header>
+            </article>
+            <article>
+              <head>
+                <h5></h5>
+                <p class="author"></p>
+              </head>
+            </article>
+          </section>
+        </section>
+      </section>
+    </main>
+
+        <script type="module" src="checkMedia.js"></script>
+        <script src="accordion.js"></script>
+  </body>
 </html>

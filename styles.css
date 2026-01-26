@@ -2,9 +2,69 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: white;
+  border: 0;
+  /* color: white;  */
+}
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,19,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+
+--step--2: clamp(0.6683rem, 0.7035rem + -0.0455vw, 0.6944rem);
+--step--1: clamp(0.8333rem, 0.8133rem + 0.1vw, 0.8908rem);
+--step-0: clamp(1rem, 0.9348rem + 0.3261vw, 1.1875rem);
+--step-1: clamp(1.2rem, 1.0668rem + 0.666vw, 1.5829rem);
+--step-2: clamp(1.44rem, 1.2069rem + 1.1653vw, 2.1101rem);
+--step-3: clamp(1.728rem, 1.3507rem + 1.8864vw, 2.8127rem);
+--step-4: clamp(2.0736rem, 1.4907rem + 2.9143vw, 3.7493rem);
+--step-5: clamp(2.4883rem, 1.6154rem + 4.3644vw, 4.9979rem);
+
+--light-blue: hsla(180, 22%, 81%, 1);
+--faded-copper: hsla(24, 21%, 48%, 1);
+--iron-grey: hsla(192, 8%, 25%, 1);
+--carbon-black: hsla(0, 1%, 13%, 1);
+--khaki-beige: hsla(27, 21%, 66%, 1);
+
+  --coffee-bean: #eacda3; /* Example color, replace with yours */
+  --iron-grey: #555;
+  --carbon-black: #222;
 }
 
+a {
+  text-decoration: none;
+}
+
+::selection {
+  /* background-color: var(--ash-brown); */
+  background-color: var(--faded-copper);
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+ 
+
+  /* box */
+  width: 100%;
+}
+
+
+p {
+  font-size: var(--step-0);
+  max-width: 65ch;
+  color: black;
+  text-align: justify;
+}
+
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+/* @font-face */
 @font-face {
   font-family: "Roboto Condensed";
   src: url("./fonts/RobotoCondensed-VariableFont_wght.ttf");
@@ -15,47 +75,204 @@
   src: url("./fonts/SpaceGrotesk-VariableFont_wght.ttf");
 }
 
-h1 {
-  /* font-family: "Roboto Condensed"; */
+h1, h2, h3, h4, h5, h6 {
   font-family: "Space Grotesk";
-  margin: 1%;
+  /* margin: 0px 1vw; */
 }
 
-
-.header {
-  overflow: hidden;
-  width: 100vw;
-  height: 10vh;
-  background-color: hsl(0, 0%, 10%);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+h1 {
+  font-size: var(--step-5);
 }
 
-#filler {
-  flex-grow: 1;
-  /* outline: 1px solid white; */
+h2 {
+  font-size: var(--step-4);
 }
-img {
-  height: 100%;
+
+h3 {
+  font-size: var(--step-3)
+}
+
+h4 {
+  font-size: var(--step-2)
+}
+
+h5 {
+  font-size: var(--step-1);
+}
+
+h6 {
+  font-size: var(--step-0); /* Same size as body text */
+  text-transform: uppercase; /* ALL CAPS */
+  letter-spacing: 0.05em;   /* Spread letters out slightly */
+  font-weight: 700;         /* Bold */
+  /* color: #666;     */
+}
+
+html {
+  font-family: "Inter";
+  color: var(--carbon-black);
+}
+
+.section-separator {
+  height: 2px;
+  background-color: var(--iron-grey);
+}
+
+h2 {
+  /* font-size: clamp(1.3rem, 2.5vw, 2rem); */
+  font-family: "Space Grotesk";
+  /* font-family: "Space Grotesk"; */
+  color: var(--iron-grey);
+}
+
+.banner {
+  /* box */
+  height: 20vh;
   width: 100%;
-}
-.social-buttons {
-  list-style: none;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+  /* layout */
+  position: relative;
+  background-color: #fff; /* Ensure the banner has a background color */
+  overflow: hidden; /* Keeps lines inside the banner area */
 }
 
-.social-buttons li {
-  max-height: 50px;
-  max-width: 50px;
+/* The Canvas - Sits at the bottom layer */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Lowest priority */
+    pointer-events: none;
 }
+
+/* The ZC Box - Sits on top */
+#banner-content {
+  /* box */
+  background-color: var(--coffee-bean); /* Important: hides lines behind the box */
+  
+  /* layout */
+  position: absolute;
+  bottom: -2px; 
+  left: 5%;
+  z-index: 10; /* Highest priority - Sits ON TOP of canvas */
+}
+
+.banner h1 {
+  /* font-size: var(--step-5); */
+  font-size: 3rem; /* Placeholder size */
+  color: var(--iron-grey);
+  border: 2px solid var(--carbon-black);
+  padding: 0px 15px;
+  margin: 0; /* Good practice to reset margins on headers */
+}
+
 
 
 .maincontent {
-  width: 100vw;
-  height: 90vh;
-  background-color: rgb(128, 128, 128);
+  width: 100%;
+  /* height: 70vh; */
+  /* background-color: var(); */
+  color: var(--ash-brown)
 }
+
+.section-projects, 
+.section-stories,
+.section-ideas,
+.section-goals,
+.section-recommendations
+{
+  /* box */
+ padding-left: 2%;
+  width: 100%;  
+  /* inner layout */
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+  align-items: stretch;
+}
+
+.card {
+  margin: 2vw;
+  border-left: 2px solid var(--iron-grey);
+}
+
+.card header {
+  cursor: pointer; /* UX: Shows it's clickable */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.card header:hover {
+  background-color: hsla(0, 0%, 95%, 1); /* Slight highlight on hover */
+}
+
+.card header::after {
+  content: '▼'; /* You can also use an SVG or FontIcon here */
+  font-size: 0.8rem;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card.is-open header::after {
+  transform: rotate(180deg);
+}
+
+
+.card-content {
+  /* Hidden State by default */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  
+  /* Smooth Animation */
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out, padding 0.4s ease;
+  
+  /* Reset padding in closed state to avoid spacing issues */
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.card.is-open .card-content {
+  /* Set a max-height large enough to fit content. 
+     JS can calculate exact height, but CSS-only needs a hard number. */
+  max-height: 1000px; 
+  opacity: 1;
+  
+  /* Add padding back when open */
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+.author {
+  text-decoration: i;
+}
+
+.tool-icon {
+  border-radius: 10px;
+  padding: 2px;
+  border: 1px solid var(--iron-grey);
+  width: clamp(16px, 50%, 34px);
+}
+
+@media screen and (max-width: 425px) {
+  #banner-content {
+    left: 0;
+    width: 100%;
+  }
+}
+
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+/* html::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+} */
